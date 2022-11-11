@@ -1,0 +1,45 @@
+.about-me-wrapper {
+  display: flex;
+  height: 0px;
+  opacity: 0;
+}
+
+@keyframes show-down {
+  from {
+    height: 0px;
+    opacity: 0;
+  }
+  to {
+    height: 420px;
+    opacity: 1;
+    background-color: #9a8c98;
+  }
+}
+
+.show-down {
+  position: relative;
+  top: -49px;
+  z-index: 1;
+  animation: show-down 1s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes hide-up {
+  from {
+    height: 420px;
+    opacity: 1;
+  }
+  to {
+    height: 0px;
+    opacity: 0;
+  }
+}
+
+.hide-up {
+  background-color: #9a8c98;
+  position: relative;
+  top: -49px;
+  z-index: 1;
+  animation: hide-up 1s;
+  animation-fill-mode: forwards;
+}
